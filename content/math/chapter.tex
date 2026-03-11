@@ -174,3 +174,10 @@ $\lim_{k\rightarrow\infty}\mathbf{P}^k = \mathbf{1}\pi$.
 A Markov chain is an A-chain if the states can be partitioned into two sets $\mathbf{A}$ and $\mathbf{G}$, such that all states in $\mathbf{A}$ are absorbing ($p_{ii}=1$), and all states in $\mathbf{G}$ leads to an absorbing state in $\mathbf{A}$.
 The probability for absorption in state $i\in\mathbf{A}$, when the initial state is $j$, is $a_{ij} = p_{ij}+\sum_{k\in\mathbf{G}} a_{ik}p_{kj}$.
 The expected time until absorption, when the initial state is $i$, is $t_i = 1+\sum_{k\in\mathbf{G}}p_{ki}t_k$.
+
+\section {Inclusion Exclusion}
+The number of elements of $\bigcap_{i = 1}^n A_i$ that lie in exactly $r$ sets: $\sum_{m=r}^n (-1)^{m-r}\dbinom{m}{r} \sum_{|X|=m} \left|\bigcap_{i \in X} A_{i}\right|$\\
+The number of elements that lie in at least $r$ sets: $\sum_{m=r}^n (-1)^{m-r}\dbinom{m - 1}{r - 1} \sum_{|X|=m} \left|\bigcap_{i \in X} A_{i}\right|$
+
+\section {Ordered Pairs}
+The square of the size of a set is equal to the number of ordered pairs of elements in the set. Similarly, the k-th power is equal to the number of sequences (tuples) of length k.

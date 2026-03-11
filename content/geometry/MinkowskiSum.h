@@ -33,6 +33,6 @@ vector<P> minkowski(vector<vector<P>> &poly) {
         ans.push_back(cur);
         cur = cur + d;
     }
-    if (!sz(ans)) return {cur}; // All polygons were size 
+    if (!sz(ans)) return {cur};
     return ans;
 }
