@@ -13,12 +13,12 @@
 const ll mod = 17; // change to something else
 struct Mod {
 	ll x;
-	Mod(ll xx) : x(xx) {}
-	Mod operator+(Mod b) { return Mod((x + b.x) % mod); }
-	Mod operator-(Mod b) { return Mod((x - b.x + mod) % mod); }
-	Mod operator*(Mod b) { return Mod((x * b.x) % mod); }
-	Mod operator/(Mod b) { return *this * invert(b); }
-	Mod invert(Mod a) {
+	Mod(ll xx = 0) : x(xx) {}
+	Mod operator+(Mod b) const { return Mod((x + b.x) % mod); }
+	Mod operator-(Mod b) const { return Mod((x - b.x + mod) % mod); }
+	Mod operator*(Mod b) const { return Mod((x * b.x) % mod); }
+	Mod operator/(Mod b) const { return *this * invert(b); }
+	Mod invert(Mod a) const{
 		ll x, y, g = euclid(a.x, mod, x, y);
 		assert(g == 1); return Mod((x + mod) % mod);
 	}
